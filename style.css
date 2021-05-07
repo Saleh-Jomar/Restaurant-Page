@@ -1,3 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    color: white;
+}
 header{
-    text-align: center;
+    padding: 2rem;
+    text-align: center; 
+    border-bottom: 1px solid #222;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+    font-size: 8rem;
+}
+
+button {
+    background: transparent;
+    color: inherit;
+    font-size: 2rem;
+    padding: 2rem;
+    border: 0px;
+    transition: 200ms ease-in-out;
+}
+button:hover {
+    transform: translateY(-10%);
+}
+
+.active {
+    border-bottom: 2px solid white;
 }
