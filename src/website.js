@@ -16,11 +16,24 @@ class Website{
     createNav(){
         const nav  = document.createElement('nav');
         nav.classList.add('nav');
-    
-        nav.appendChild(this.createButton('Home'));
-        nav.appendChild(this.createButton('Menu'));
-        nav.appendChild(this.createButton('Contact'));
-    
+        
+        const home = this.createButton('Home');
+        const menu = this.createButton('Menu');
+        const contact = this.createButton('Contact');
+        
+        home.classList.add('active');
+
+        nav.append(home,menu,contact);
+
+        nav.addEventListener('click',(e)=>{
+            for (let i = 0; i<3; i++){
+                if (nav.children[i].classList.contains('active')){
+                    nav.children[i].classList.remove('active');
+                }
+            }   
+            e.target.classList.add('active');
+        })
+
         return nav;
     }
     
@@ -28,7 +41,7 @@ class Website{
         const button = document.createElement('button');
         button.textContent = id;
         button.id = id;
-        
+        button.classList.add(id);
         return button;
     
     }

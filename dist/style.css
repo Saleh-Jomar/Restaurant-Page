@@ -22,9 +22,12 @@ h1 {
 button {
     background: transparent;
     color: inherit;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
     font-size: 2rem;
     padding: 2rem;
-    border: 0px;
+    border-bottom: 2px solid transparent;
     transition: 200ms ease-in-out;
 }
 button:hover {
