@@ -7,7 +7,9 @@
     "url": "https://github.com/Saleh-Jomar/Restaurant-Page.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode='production'",
+    "watch": "webpack --mode='production' --watch"
   },
   "author": "Saleh Jomar Salugandang",
   "license": "ISC",
