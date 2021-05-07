@@ -1,4 +1,5 @@
-import initialize from './init'
+import Website from './website'
 
-initialize()
+let website = new Website();
+website.initialize();
 

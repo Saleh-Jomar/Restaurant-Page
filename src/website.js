@@ -50,9 +50,5 @@ class Website{
     }
 
 }
-function initialize(){
-    const website = new Website();
-    website.initialize();
-}
 
-export default initialize;
+export default Website;
