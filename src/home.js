@@ -4,16 +4,16 @@ class Home {
         const home = document.createElement('div');
         home.classList.add('homepage');
 
-        home.appendChild(
-            this.createParagraph('This is the first line')
-        );
-        home.appendChild(
-            this.createParagraph('This is the second line')
-        );
-        home.appendChild(
+        const img = document.createElement('img');
+        img.src = 'Images/frontpage.jpg';
+        img.alt = 'Random Image';
+
+        home.append(
+            this.createParagraph('This is the first line'),
+            this.createParagraph('This is the second line'),
+            img,
             this.createParagraph('This is the third line')
-        );
-        
+        );    
         return home;
     }
 

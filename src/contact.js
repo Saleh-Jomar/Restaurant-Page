@@ -1,19 +1,21 @@
 class Contact{
     createContact(){
-        const contact = document.createElement('div')
+        const contact = document.createElement('div');
         contact.classList.add('contactpage');
 
-        contact.appendChild(
-            this.createParagraph(
-                'Phone: 09453320290'
-            )
-        )
+        const location = document.createElement('img');
+        location.src = 'Images/map.jpeg';
+        location.alt = 'Location';
 
-        contact.appendChild(
+        contact.append(
             this.createParagraph(
-                'Address: 31 Lawaan Street Tatalon Quezon City'
-            )
-        )
+                'Phone: 012 345 6789'
+            ),
+            this.createParagraph(
+                'Address: National Capital Region, Philippines'
+            ),
+            location
+        );
 
         return contact;
 

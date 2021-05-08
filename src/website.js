@@ -53,12 +53,13 @@ class Website{
     }
     
     createFooter(){
-    
+        const footer = document.createElement('footer')
+        return footer;
     }
     
     render(){
         const content = document.getElementById('content');
-        content.append(this.createHeader(),this.createMain());
+        content.append(this.createHeader(),this.createMain(),this.createFooter());
     }
 
 }
