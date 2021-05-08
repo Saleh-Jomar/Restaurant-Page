@@ -1,11 +1,13 @@
 import Website from './website'
 import Home from './home'
 import Contact from './contact'
+import Menu from './menu'
 
 class Page {
     website = new Website();
     home = new Home()
     contact = new Contact()
+    menu = new Menu();
 
     Initialize() {
         this.website.render();
