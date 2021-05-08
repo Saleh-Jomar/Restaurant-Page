@@ -2,7 +2,6 @@ class Website{
     
     createHeader(){
         const header = document.createElement('header');
-        header.classList.add('header');
     
         const restaurantName = document.createElement('h1')
         restaurantName.classList.add('Restaurant-Name')
@@ -15,23 +14,25 @@ class Website{
     
     createNav(){
         const nav  = document.createElement('nav');
-        nav.classList.add('nav');
         
-        const home = this.createButton('Home');
-        const menu = this.createButton('Menu');
-        const contact = this.createButton('Contact');
+        const home = this.createButton('home');
+        const menu = this.createButton('menu');
+        const contact = this.createButton('contact');
         
         home.classList.add('active');
 
         nav.append(home,menu,contact);
 
         nav.addEventListener('click',(e)=>{
-            for (let i = 0; i<3; i++){
-                if (nav.children[i].classList.contains('active')){
-                    nav.children[i].classList.remove('active');
+            if (e.target.tagName=='BUTTON'){
+                for (let i = 0; i<3; i++){
+                    if (nav.children[i].classList.contains('active')){
+                        nav.children[i].classList.remove('active');
+                    }
                 }
-            }   
-            e.target.classList.add('active');
+                
+                e.target.classList.add('active');
+            }
         })
 
         return nav;
@@ -39,17 +40,15 @@ class Website{
     
     createButton(id){
         const button = document.createElement('button');
-        button.textContent = id;
+        button.textContent = id[0].toUpperCase() + id.slice(1);
         button.id = id;
-        button.classList.add(id);
         return button;
     
     }
     
     createMain(){
         const main = document.createElement('main');
-        main.classList.add('main');
-    
+
         return main;
     }
     
@@ -57,7 +56,7 @@ class Website{
     
     }
     
-    initialize(){
+    render(){
         const content = document.getElementById('content');
         content.append(this.createHeader(),this.createMain());
     }
