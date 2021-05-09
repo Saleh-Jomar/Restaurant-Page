@@ -5,8 +5,8 @@ import Menu from './menu'
 
 class Page {
     website = new Website();
-    home = new Home()
-    contact = new Contact()
+    home = new Home();
+    contact = new Contact();
     menu = new Menu();
 
     Initialize() {

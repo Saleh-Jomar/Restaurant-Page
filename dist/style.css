@@ -53,6 +53,7 @@ button {
     border-bottom: 2px solid transparent;
     transition: 200ms ease-in-out;
 }
+
 button:hover {
     transform: translateY(-10%);
 }
@@ -61,19 +62,34 @@ button:hover {
     border-bottom: 2px solid white;
 }
 
-
-
 .homepage {
     text-align: center;
 }
-.homepage img {
+
+.homepage img{
     width: 40rem;
     height: 40rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
     border-radius: 50%;
 }
+
 .contactpage img{
     display: block;
     margin: 2rem auto;
+}
+
+.menuItem {
+    text-align: center;
+}
+
+.menuItem img{
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem;
+}
+
+.menupage {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
